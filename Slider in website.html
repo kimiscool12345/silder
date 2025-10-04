@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sections Example</title>
+</head>
+
+<body>
+
+    <section>
+        <img class="myslides" src="Pictures/images.png" alt="red_pen" width="300">
+        <img class="myslides" src="Pictures/images (1).png" alt="firebase" width="300">
+        <img class="myslides" src="Pictures/download.png" alt="apple" width="300">
+    </section>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel,997); //
+        }
+    </script>
+
+</body>
+
+</html>
